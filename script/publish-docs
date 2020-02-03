@@ -5,8 +5,8 @@ set -e
 
 # Store the versions
 VERSION=$(git describe --tags --match "v[0-9]*" --abbrev=0 | sed 's/^v//')
-HEAD=$(git rev-parse HEAD)
-REPO=https://x-access-token:${OCTOKITBOT_PAT}@github.com/probot/probot.github.io.git
+HEAD="37c878efe3e9a86b892eb3640137a555dbe3988f"
+REPO=https://x-access-token:${OCTOKITBOT_PAT}@github.com/MaximDevoir/probot.io.git
 
 # Generate docs
 npm run doc
