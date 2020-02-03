@@ -7,7 +7,7 @@ set -x
 
 # Store the versions
 VERSION=$(git describe --tags --match "v[0-9]*" --abbrev=0 | sed 's/^v//')
-HEAD="f5e840748652642a4429dd78d0c2fba197b49aa2"
+HEAD="8e8700d6bcc3bd4b1e1a2154d0c68eefbcaa486c"
 REPO=https://x-access-token:${OCTOKITBOT_PAT}@github.com/MaximDevoir/probot.io.git
 
 # Generate docs
@@ -41,7 +41,7 @@ cd ../..
 
 # Configure Git and Commit, and publish
 git config --global user.email "actions@github.com"
-git config --global user.name "$GITHUB_ACTOR"
+git config --global user.name "GitHub Actions"
 git add .
 git commit -m "Update docs for v$VERSION"
 git push "$REPO" master
