@@ -33,7 +33,7 @@ rm -rf "api/$VERSION"
 ln -sfn "$VERSION" api/latest
 
 # Update the submodule
-git submodulesubmodule update --init
+git submodule update --init
 cd _submodules/probot
 git fetch
 git checkout "$HEAD"
