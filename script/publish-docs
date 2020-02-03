@@ -3,6 +3,8 @@
 # Exit if a command returns a non-zero code
 set -e
 
+set -x
+
 # Store the versions
 VERSION=$(git describe --tags --match "v[0-9]*" --abbrev=0 | sed 's/^v//')
 HEAD=$(git rev-parse HEAD)
@@ -12,7 +14,7 @@ npm run doc
 
 # Checkout the website into the tmp directory
 [ -d tmp/website ] || {
-  REPO=https://github.com/probot/probot.github.io
+  REPO=https://github.com/MaximDevoir/probot.io
 
   # If OCTOKITBOT_PAT environment variable is present, use that to push.
   if [[ -n "$OCTOKITBOT_PAT" ]]; then
